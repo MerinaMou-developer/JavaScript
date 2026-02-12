@@ -10,15 +10,57 @@
     
     <header>
         <h1>welcome to my DOM</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe reprehenderit perspiciatis magni maxime necessitatibus facilis, consectetur ducimus. Earum accusamus iste temporibus, iusto fugiat eius deleniti accusantium impedit perferendis? Eius, dolore?</p>
     </header>
-    <main>
-        <h1>My awsome dom</h1>
-        <ul>
-            <li>mou</li>
-            <li>akash</li>
-        </ul>
+    <main id="main-container">
+        <section>
+
+            <h1>My awsome dom</h1>
+            <ul> 
+                <li>mou</li>
+                <li>akash</li>
+            </ul>
+
+
+        </section>
+        <section class="fruits-container">
+            <h1 id="frouts-title">frouit i like</h1>
+            <ul>
+                <li>apple</li>
+                <li>banana</li>
+                <li>carrot</li>
+            </ul>
+        </section>
+        <section >
+            <h1>places i like to visit</h1>
+            <ul id="places-list">
+                <li class="important-places">katabon</li>
+                <li class="important-places">sobujbon</li>
+                <li class="important-places">katabon</li>
+                <li class="important-places">sundorbon</li>
+            </ul>
+        </section>
+       
     </main>
 
     <script src="js/dom.js"></script>
+    <script src="js/mystyle.js"></script>
+    <script src="js/append.js"></script>
+    <script>
+        const licollection=document.getElementsByTagName('li');
+        const places=document.getElementsByClassName('important-places')
+        for(const place of places){
+            console.log(place.innerText)
+        }
+
+
+        // queryselectorAll
+        const someli=document.querySelectorAll('.fruits-container li');
+        console.log(someli);
+        for (const li of someli){
+            console.log(li.innerText)
+
+        }
+    </script>
 </body>
 </html>
